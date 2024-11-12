@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Document</title>
+</head>
+<body>
+<h1>Tehtävä 5</h1>
+<p id="tulos"></p>
+
+<script>
+    const year = parseInt(prompt('Enter a year: '))
+    if (year % 4 == 0) {
+    document.querySelector('#tulos').innerHTML = 'This year is leap year';
+    }
+    else if (year % 100 == 0 && age % 400 == 0) {
+    document.querySelector('#tulos').innerHTML = year + ' is leap year';
+    }
+    else {
+    document.querySelector('#tulos').innerHTML = 'Vuosi ei ole karkausvuosi';
+    }
+</script>
+</body>
+</html>
