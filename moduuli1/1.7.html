@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Document</title>
+</head>
+<body>
+<h1>tehtävä 7</h1>
+<p id="vastaus"></p>
+
+<script>
+let kerrat = parseInt(prompt('kuinka monta noppaa heitetään?'));
+function noppa() {
+    return Math.floor(Math.random() * 6) + 1;
+}
+
+sum = 0;
+
+for (let i = 0; i < kerrat; i++) {
+    sum += noppa();
+}
+document.querySelector('#vastaus').innerHTML = sum;
+</script>
+    
+</body>
+</html>
