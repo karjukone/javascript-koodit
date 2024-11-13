@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Document</title>
+</head>
+<body>
+<h1>Tehtävä6</h1>
+<p id="vastaus"></p>
+<script>
+if (confirm('Should I calculate the square root?')) {
+    let number = prompt('Give a number:');
+    if (number >= 0) {
+        document.querySelector('#vastaus').innerHTML = (Math.sqrt(number))
+    }
+    else {
+        document.querySelector('#vastaus').innerHTML = 'The square root of negative number cannot be calculated';
+        }
+}
+else {
+    document.querySelector('#vastaus').innerHTML = 'ei sitte';
+    }
+</script>
+</body>
+</html>
