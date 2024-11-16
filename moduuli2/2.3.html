@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Document</title>
+</head>
+<body>
+<h1>tehtävä 2.3.</h1>
+<ol></ol>
+<script>
+names = [];
+
+for (let i = 0; i < 6; i++) {
+    let name = prompt('enter a name of the dog:');
+    names.push(name);
+}
+
+names.sort();
+names.reverse();
+
+for (let n of names) {
+    document.querySelector('ol').innerHTML += (`<li> ${n} </li>`);
+}
+
+</script>
+</body>
+</html>

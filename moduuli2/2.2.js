@@ -9,9 +9,7 @@ for (let i = 0; i < montako; i++) {
 }
 
 nimet.sort(); 
-let lista = "";
 
 for (let i = 0; i < nimet.length; i++) {
-    lista += `<li> ${nimet[i]} </li>`;
+    document.querySelector('ol').innerHTML += `<li> ${nimet[i]} </li>`;
 }
-document.querySelector('ol').innerHTML = lista; 
