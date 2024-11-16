@@ -7,9 +7,7 @@ for (let i = 0; i < montako; i++) {
     nimet.push(nimi);
 }
 
-let html = ""
 for (let i=0; i < nimet.length; i++) {
-    nimet.sort(i);
-    html += "<li>" + nimet[i] + "</li>";
-    document.querySelector('#nimet').innerHTML = html;
+    nimet.sort(i);;
+    document.querySelector('#nimet').innerHTML = `<li> ${i} </li>`;
 }
