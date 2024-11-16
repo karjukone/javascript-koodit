@@ -7,24 +7,19 @@
 <body>
     <h1>Tehtävä 8</h1>
     <ul> 
-
     </ul>
     <script>
-        const year = parseInt(prompt('Enter a start year: '))
-        const endYear = parseInt(prompt('Enter an end year'))
+        const year = parseInt(prompt('Enter a start year: '));
+        const endYear = parseInt(prompt('Enter an end year'));
 
         for (let i = year; i < endYear; i++) {
-            if (year % 4 == 0) {
-                document.querySelector('ul').innerHTML = (`<li> ${i} </li>`);
+            if (i % 4 == 0) {
+                document.querySelector('ul').innerHTML += (`<li> ${i} </li>`);
         }
-            else if (year % 100 == 0 && age % 400 == 0) {
-            document.querySelector('ul').innerHTML = (`<li> ${i} </li>`);
-        }
-            else {
-            document.querySelector('ul').innerHTML = "ei midi";
+            else if (i % 100 == 0 && i % 400 == 0) {
+            document.querySelector('ul').innerHTML += (`<li> ${i} </li>`);
         }
         }
-
     </script>
 </body>
 </html>
