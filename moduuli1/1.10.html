@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Document</title>
+</head>
+<body>
+<h1> tehtävä 10</h1>
+<p id="vastaus"></p>
+<script>
+let kerrat = parseInt(prompt('How many dices?'));
+let summa = parseInt(prompt('what is the target sum of dice?'));
+
+let osumat = 0;
+
+for (let i = 0; i < 10000; i++) {
+
+    let sum = 0;
+
+    for (let heitto = 0; heitto < kerrat; heitto++) {
+        sum += Math.floor(Math.random() * 6) + 1;
+    }
+    if (sum === summa) {
+        osumat++;
+    }
+}  
+let tulos = (osumat / 10000) * 100;
+document.querySelector('#vastaus').innerHTML = `The probability to get a sum of ${summa} with ${kerrat} dice is ${tulos.toFixed(2)}% `;
+
+</script>
+
+</body>
+</html>
