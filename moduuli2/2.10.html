@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Document</title>
+</head>
+<body>
+<script>
+
+const numCandinates = parseInt(prompt('enter the number of candinates: '));
+let candinates = []
+
+for (i = 0; i < numCandinates; i++) {
+    const nimi = prompt(`enter a name of candinate ${i+1}`);
+    candinates.push({ name : nimi, votes : 0});
+}
+
+const numVoters = parseInt(prompt('enter the number of voters: '));
+
+for (let i = 0; i < numVoters; i++) {
+    const vote = prompt('Vote your fav candinates name: ');
+    if (vote) {
+        const candinate = candinates.find(c => c.name === vote);
+        if (candinate) {
+            candinate.votes++;
+        }
+    }
+}
+
+candinates.sort((a, b) => {
+   console.log(a, b);
+   return b - a;
+});
+
+</script>
+
+</body>
+</html>
