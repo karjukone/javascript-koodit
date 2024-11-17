@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Document</title>
+</head>
+<body>
+<h1>Tehtävä 2.5.</h1>
+<script>
+    numbers = []
+    
+    while (true) {
+        let number = parseInt(prompt('Enter a number: '));
+
+        if (numbers.includes(number)) {
+            break;
+            }
+    numbers.push(number);
+    }
+    numbers.sort((a,b)=> a-b);
+
+    for(let n of numbers) {
+        console.log(n)
+    }
+</script>
+    
+</body>
+</html>

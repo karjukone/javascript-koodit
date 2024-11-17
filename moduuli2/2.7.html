@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+<ul></ul>
+<script>
+
+let max = parseInt(prompt('Enter maximum number on dice'))
+
+function dice (sides) {
+    tulos = Math.floor(Math.random() * max) +1;
+    document.querySelector('ul').innerHTML += (`<li> ${tulos} </li>`);
+    return tulos;
+}
+
+while (true) {
+    let noppa = dice ();
+    if (noppa === max) {
+        break
+    }
+}
+
+</script>
+</body>
+</html>
