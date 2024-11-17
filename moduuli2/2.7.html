@@ -11,14 +11,14 @@
 
 let max = parseInt(prompt('Enter maximum number on dice'))
 
-function dice (sides) {
+function dice(sides) {
     tulos = Math.floor(Math.random() * max) +1;
     document.querySelector('ul').innerHTML += (`<li> ${tulos} </li>`);
     return tulos;
 }
 
 while (true) {
-    let noppa = dice ();
+    let noppa = dice(max);
     if (noppa === max) {
         break
     }
